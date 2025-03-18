@@ -20,4 +20,4 @@ def visualization(dataloader_train):
         if found_classes == 10:
             break
 
-    return plt.show()
+    plt.show()

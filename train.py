@@ -23,4 +23,22 @@ if __name__ == "__main__":
     print(f'Number of classes: {num_classes}')
     print(f'Number of samples: {num_samples}')
 
-    visualization(dataloader_train)    
+    #visualization(dataloader_train)   
+    fig, axes = plt.subplots(2, 5, figsize=(15, 6))
+    classes_sampled = []
+    found_classes = 0 # num di classes
+
+    for i, (inputs, classes) in enumerate(dataloader_train):
+        img = inputs[i].squeeze()
+        label = classes[i]
+        if label not in classes_sampled:
+            classes_sampled.append(label)
+            img_denormalize = denormalize(img)
+            found_classes += 1
+            plt.subplot(2, 5, i + 1)
+            plt.title(f"label:{label}")
+            plt.imshow(img_denormalize)
+        if found_classes == 10:
+            break
+
+    plt.show() 
