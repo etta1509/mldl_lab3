@@ -1,1 +1,8 @@
-
+os
+torch
+torchvision
+matplotlib
+requests
+zipfile
+io
+numpy
