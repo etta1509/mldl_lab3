@@ -2,5 +2,4 @@ torch
 torchvision
 matplotlib
 requests
-io
-numpy
+wandb
