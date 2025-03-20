@@ -32,10 +32,11 @@ def transform_2():
     return transform
 
 def modify_dataset():
-    with open('./dataset/tiny-imagenet-200/val/val_annotations.txt') as f:
+    with open('tiny-imagenet/tiny-imagenet-200/val/val_annotations.txt') as f:
         for line in f:
             fn, cls, *_ = line.split('\t')
-            os.makedirs(f'./dataset/tiny-imagenet-200/val/{cls}', exist_ok=True)
-            shutil.copyfile(f'./dataset/tiny-imagenet-200/val/{fn}', f'./dataset/tiny-imagenet-200/val/{cls}/{fn}')
+            os.makedirs(f'tiny-imagenet/tiny-imagenet-200/val/{cls}', exist_ok=True)
 
-    shutil.rmtree('./dataset/tiny-imagenet-200/val')
+            shutil.copyfile(f'tiny-imagenet/tiny-imagenet-200/val/images/{fn}', f'tiny-imagenet/tiny-imagenet-200/val/{cls}/{fn}')
+
+    shutil.rmtree('tiny-imagenet/tiny-imagenet-200/val/images')
