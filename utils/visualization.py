@@ -17,7 +17,7 @@ def visualization(dataloader_train):
             plt.subplot(2, 5, i + 1)
             plt.title(f"label:{label}")
             plt.imshow(img_denormalize)
-        if found_classes == 10:
+        if found_classes == 9:
             break
 
     plt.show()
