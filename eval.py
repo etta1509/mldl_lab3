@@ -5,7 +5,7 @@ from torchvision.datasets import ImageFolder
 from dataset.transform_dataset import *
 from data.dataloader import *
 from models.custom_net import *
-from train import train, train_loader # Attenzione può essere sbagliato!
+from train import *
 
 # Validation loop
 def validate(model, val_loader, criterion):
