@@ -41,7 +41,7 @@ if __name__ == "__main__":
     tiny_imagenet_dataset_val = ImageFolder(root='tiny-imagenet/tiny-imagenet-200/test', transform=transform_2())
 
     # DataLoader
-    _, val_loader = dataloader(tiny_imagenet_dataset_train, tiny_imagenet_dataset_val, 32, True, False)
+    train_loader, val_loader = dataloader(tiny_imagenet_dataset_train, tiny_imagenet_dataset_val, 32, True, False)
 
     print(f"Length of val dataset: {len(tiny_imagenet_dataset_val)}")
 
