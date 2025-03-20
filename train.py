@@ -60,8 +60,8 @@ if __name__ == "__main__":
     #### LAB 2 
     # Load the dataset
     modify_dataset()
-    tiny_imagenet_dataset_train = ImageFolder(root='tiny-imagenet/tiny-imagenet-200/train', transform=transform_2())
-    tiny_imagenet_dataset_val = ImageFolder(root='tiny-imagenet/tiny-imagenet-200/val', transform=transform_2())
+    tiny_imagenet_dataset_train = ImageFolder(root='./dataset/tiny-imagenet/tiny-imagenet-200/train', transform=transform_2())
+    tiny_imagenet_dataset_val = ImageFolder(root='./dataset/tiny-imagenet/tiny-imagenet-200/val', transform=transform_2())
 
     # DataLoader
     train_loader, _ = dataloader(tiny_imagenet_dataset_train, tiny_imagenet_dataset_val, 32, True, False)
